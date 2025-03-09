@@ -134,6 +134,20 @@ class Lights extends StatefulWidget {
 }
 
 class _LightsState extends State<Lights> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,15 +170,16 @@ class _LightsState extends State<Lights> {
             Text(
               'How many hanging lights are there?'
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const Chevron(title: 'Chevron Sign')),
-                );
+            TextField(
+              textAlign: TextAlign.center,
+              controller: _controller,
+              onSubmitted: (String value) async {
+                if (value.compareTo('16') == 0) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Chevron(title: 'Find the Chevron Center')),
+                  );
+                }
               },
-              child: Text(
-                'Continue',
-              ),
             ),
           ],
         ),
@@ -235,6 +250,20 @@ class Hallway extends StatefulWidget {
 }
 
 class _HallwayState extends State<Hallway> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -267,15 +296,16 @@ class _HallwayState extends State<Hallway> {
               '\nWhat is the room number of the room you are looking for?',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const Glass(title: 'Glass Walls')),
-                );
+            TextField(
+              textAlign: TextAlign.center,
+              controller: _controller,
+              onSubmitted: (String value) async {
+                if (value.compareTo('1233') == 0) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Glass(title: 'Find the Cool Labs')),
+                  );
+                }
               },
-              child: Text(
-                'Continue',
-              ),
             ),
           ],
         ),
@@ -353,6 +383,20 @@ class Skybridge extends StatefulWidget {
 }
 
 class _SkybridgeState extends State<Skybridge> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -382,15 +426,16 @@ class _SkybridgeState extends State<Skybridge> {
               'Enter the number of lights on the side with fewer, followed by two zeros.',
               style: Theme.of(context).textTheme.headlineSmall
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const Vending(title: 'Treasure')),
-                );
+            TextField(
+              textAlign: TextAlign.center,
+              controller: _controller,
+              onSubmitted: (String value) async {
+                if (value.compareTo('1100') == 0) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Vending(title: 'Treasure!')),
+                  );
+                }
               },
-              child: Text(
-                'Continue',
-              ),
             ),
           ],
         ),
