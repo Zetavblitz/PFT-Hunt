@@ -42,8 +42,21 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
+              'The hunt begins...',
+              style: Theme.of(context).textTheme.headlineMedium
+            ),
+            Text(
+              'On the first floor of PFT, there is a hidden cave of treasure.',
+            ),
+            Text(
+              'To claim this treasure is not without cost.'
+            ),
+            Text(
+              'But first, there is only one question that matters...'
+            ),
+            Text(
               'Are you ready?',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             TextButton(
               onPressed: () {
@@ -88,6 +101,12 @@ class _PaneraState extends State<Panera> {
               'Go to Panera Bread on the first floor of PFT.',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(
+              'This is the starting point for your search.'
+            ),
+            Text(
+              'Once you have located Panera, press \'Continue\''
+            ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -128,8 +147,14 @@ class _LightsState extends State<Lights> {
           children: <Widget>[
             Image(image: AssetImage('Lights.jpg')),
             Text(
-              'Look at the lights',
+              'Look at the hanging lights.',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'In the atrium with tables in front of Panera, there are a number of hanging, cylindrical lights.'
+            ),
+            Text(
+              'How many hanging lights are there?'
             ),
             TextButton(
               onPressed: () {
@@ -171,8 +196,17 @@ class _ChevronState extends State<Chevron> {
           children: <Widget>[
             Image(image: AssetImage('Chevron.jpg')),
             Text(
-              'Look at the neon sign',
+              'Find the Neon Chevron sign.',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Elsewhere on the first floor of PFT, there is a vibrant Neon sign.',
+            ),
+            Text(
+              'This is the sign for the Chevron Center.',
+            ),
+            Text(
+              'Once you have located the Chevron Center, press \'Continue\'',
             ),
             TextButton(
               onPressed: () {
@@ -214,8 +248,24 @@ class _HallwayState extends State<Hallway> {
           children: <Widget>[
             Image(image: AssetImage('Hallway.jpg')),
             Text(
-              'Look at the hall',
+              'You\'re now searching for a specific room.',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'But first, you need to look at more lights. In the atrium across from the Chevron center, count the number of hanging lights.'
+            ),
+            Text(
+              'The exact number of lights has a specific prime decomposition. Each prime is a single digit.'
+            ),
+            Text(
+              'Find the full prime decomposition.'
+            ),
+            Text(
+              'Beginning with a leading 1, write each prime number in the decomposition in ascending order.'
+            ),
+            Text(
+              '\nWhat is the room number of the room you are looking for?',
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             TextButton(
               onPressed: () {
@@ -257,8 +307,24 @@ class _GlassState extends State<Glass> {
           children: <Widget>[
             Image(image: AssetImage('Glass.jpg')),
             Text(
-              'Look at the hall',
+              'What kind of room was it?.',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'The room should have been a lab. But, we can\'t see anything interesting inside!'
+            ),
+            Text(
+              'However, there IS a side of PFT with glass-walled labs full of cool stuff.'
+            ),
+            Text(
+              'The labs stretch all the way from one end to the other through a spacious open walkway.'
+              ),
+            Text(
+              'Which side of the building is that?'
+              ),
+            Text(
+              'Go find it.',
+              style: Theme.of(context).textTheme.headlineSmall
             ),
             TextButton(
               onPressed: () {
@@ -300,8 +366,21 @@ class _SkybridgeState extends State<Skybridge> {
           children: <Widget>[
             Image(image: AssetImage('Skybridge.jpg')),
             Text(
-              'Look at the bridge',
+              'In the middle of this walkway is an overhead bridge.',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Find the middlemost skybridge and stand underneath it.'
+            ),
+            Text(
+              'There are more hanging lights in this open hall. Look at the portion of ceiling on each side of the bridge.'
+            ),
+            Text(
+              'One side has fewer lights than the other. How many?'
+            ),
+            Text(
+              'Enter the number of lights on the side with fewer, followed by two zeros.',
+              style: Theme.of(context).textTheme.headlineSmall
             ),
             TextButton(
               onPressed: () {
@@ -343,13 +422,30 @@ class _VendingState extends State<Vending> {
           children: <Widget>[
             Image(image: AssetImage('Vending.jpg')),
             Text(
-              'Look at the treasure',
+              'Go to Zone 1100.',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(
+              'The closest sign to Zone 1100 is right beside you! Follow it from your place under the middle skybridge.'
+            ),
+            Text(
+              'Just beyond the sign for Zone 1100, there is a secret cave off to the right. In it you will find glorious treasures.'
+            ),
+            Text(
+              'But now...'
+            ),
+            Text(
+              'Are you willing to pay the price?',
+              style: Theme.of(context).textTheme.headlineSmall
+            ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const MyHomePage(title: 'PFT Scavenger Hunt')),
+                );
+              },
               child: Text(
-                'Exit',
+                'Back to Beginning',
               ),
             ),
           ],
